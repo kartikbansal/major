@@ -1,4 +1,4 @@
-ar app = angular.module('techpress');
+var app = angular.module('techpress');
 
 app.service("authService", authService);
 // app.service("fbAPIService", fbAPIService);
