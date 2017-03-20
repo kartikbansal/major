@@ -1,4 +1,4 @@
-var app = angular.module('techpress');
+ar app = angular.module('techpress');
 
 app.service("authService", authService);
 // app.service("fbAPIService", fbAPIService);
@@ -141,7 +141,6 @@ function techService($http, authService) {
   }
 
   techService.getTagResult = function(keys) {
-    console.log(keys);
     if(keys.length !== 0) {
       return $http({
         method: 'GET',

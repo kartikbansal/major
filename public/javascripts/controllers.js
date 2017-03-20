@@ -272,7 +272,6 @@
 
     resultCtrl.selectedTags = [];
 
-    console.log(resultCtrl.allTags);
     resultCtrl.checkZero = function(val) {
       if(val==0)
         return false;
@@ -318,10 +317,8 @@
 
   UserCtrl.$inject = ['userReviews', 'UserService', 'currentUser', 'selectedUser'];
   function UserCtrl(userReviews, UserService, currentUser, selectedUser) {
-    console.log(userReviews);
     var userctrl = this;
     var currUserID = currentUser[0]._id;
-    console.log(currentUser);
     var followees = currentUser[0].followees;
     userctrl.currFlag = true;
     userctrl.followFlag = false;
@@ -381,7 +378,6 @@
       }
     }
 
-    console.log();
   }
 
   EditReviewCtrl.$inject = ['EditReviewService', 'review', '$state'];
