@@ -60,7 +60,8 @@
 					<img ng-src="{{tech.image}}"/>
 					<p class="ff-Open-Sans d-inline-block">
 						{{tech.name}} <br />
-						<span ng-show="tech.totalReviews > 0"><a href="#/tech/{{tech._id}}">{{tech.totalReviews}} reviews</a></span>
+						<span ng-show="tech.totalReviews > 0"><a href="#/tech/{{tech._id}}">{{tech.totalReviews}} reviews</a> <br /></span>
+						<a target="_blank" href="{{tech.docLink}}" class="d-inline-block">View docs/guide</a>
 					</p>
 					<button class="follow-btn ff-Open-Sans pull-right" ng-hide="postReviewCtrl.check(tech._id, postReviewCtrl.techFollow)" ng-click="postReviewCtrl.addFollower(tech._id)">Follow</button>
 					<button class="follow-btn ff-Open-Sans pull-right" ng-show="postReviewCtrl.check(tech._id, postReviewCtrl.techFollow)" ng-click="postReviewCtrl.removeFollower(tech._id)" style="margin-right: -8px; color: white; background: #d82d27">Unfollow</button>
