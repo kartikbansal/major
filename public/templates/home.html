@@ -15,7 +15,7 @@
 							<span class="fa fa-star"></span> {{review.review.rating}}
 						</div>
 						<div class="m-t-10">
-							<span class="tag" ng-repeat="tag in review.tags">{{tag}}</span>
+							<a class="tag" ng-repeat="tag in review.tags" href=#/home/{{tag}}>{{tag}}</a>
 						</div>
 					</div>
 					<!-- <p class="review-title">{{review.review.title}}</p> -->

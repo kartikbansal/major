@@ -889,7 +889,7 @@ textarea, input[placeholder="Enter Source ..."] {
 
 .s-tech-card button {
 	font-size: 13px;
-	margin-left: 15px;
+	margin-left: 0px;
 	margin-top: 2px;
 	padding: 7px 20px;
   vertical-align: text-bottom;
@@ -939,6 +939,13 @@ textarea, input[placeholder="Enter Source ..."] {
 	font-size: 12px;
 	margin-right: 6px;
 	padding: 6px 10px;
+}
+
+.tag:hover {
+	background: #e5e5e5;
+	color: #666;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .b-tag {

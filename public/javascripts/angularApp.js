@@ -171,6 +171,25 @@
         }
       })
 
+      .state('reviewsForTag', {
+        url: '/home/{tag}',
+        templateUrl: '/templates/home.html',
+        controller: 'PostReviewCtrl as postReviewCtrl',
+        onEnter: ['$state', 'authService', function($state, authService) {
+          if(!authService.isLoggedIn()) {
+            $state.go('login');
+          }
+        }],
+        resolve: {
+          reviewPromise: ['$stateParams', 'ReviewService', function($stateParams, ReviewService) {
+            return ReviewService.getAllReviewsForTag($stateParams.tag);
+          }],
+          allTechInfo: ['techService', function(techService) {
+            return techService.getAll();
+          }]
+        }
+      })
+
       .state('tech', {
         url: '/tech/{id}',
         templateUrl: '/templates/home.html',

@@ -240,6 +240,18 @@ function ReviewService($http, authService, $state) {
     });
   }
 
+  reviewService.getAllReviewsForTag = function(tag) {
+    return $http({
+      method: 'GET',
+      url: '/tag/reviews',
+      params: {
+        tag: tag
+      }
+    }).success(function(data) {
+      angular.copy(data, allReviews);
+    });
+  }
+
   reviewService.getAll = function() {
     return $http({
       method: 'GET',

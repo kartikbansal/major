@@ -148,6 +148,19 @@ router.get('/reviews', function(req, res, next) {
       }
 });
 
+router.get('/tag/reviews', function(req, res, next) {
+  var query = Review.find({"tags": {$elemMatch: {$eq: req.query.tag} }});
+  query
+  .populate('userID', 'fullName _id votedReview image followees')
+  .populate('technology.techID', 'image')
+  .exec(function(err, reviews) {
+    if(err) return next(err);
+    //result = user + reviews;
+    //console.log(reviews);
+    return res.json(reviews);
+  });
+});
+
 router.get('/currreview', function(req, res, next) {
   var query = Review.find({"userID": req.query.userID, "technology.techID": req.query.techID});
 	query
