@@ -198,6 +198,10 @@ nav a:hover, nav a:active, nav a:focus {
 	z-index: -1;
 }
 
+.screen-err-msg {
+	
+}
+
 .form-wrapper {
 	background: rgba(0,0,0,0.5);
 	border-radius: 5px;
